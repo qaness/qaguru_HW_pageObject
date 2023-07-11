@@ -1,16 +1,12 @@
 package demoqa.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import demoqa.pages.components.CalendarComponent;
-import demoqa.pages.components.ModalFormComponent;
-
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TextBoxPage {
 
-    SelenideElement
+    private SelenideElement
             userNameInput = $("#userName"),
             userEmailInput = $("#userEmail"),
             currentAddressInput = $("#currentAddress"),

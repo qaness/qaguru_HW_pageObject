@@ -15,7 +15,7 @@ public class RegistrationPage {
     CalendarComponent calendar = new CalendarComponent();
     ModalFormComponent resultForm = new ModalFormComponent();
 
-    SelenideElement
+     private SelenideElement
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
@@ -31,8 +31,7 @@ public class RegistrationPage {
             pictureInput = $("#uploadPicture"),
             submitButton = $("#submit"),
             modalForm = $(".modal-dialog"),
-            formTitle = $("#example-modal-sizes-title-lg"),
-            resultTable = $(".table-responsive");
+            formTitle = $("#example-modal-sizes-title-lg");
 
 
     public RegistrationPage openPage() {
@@ -121,7 +120,7 @@ public class RegistrationPage {
     }
 
     public RegistrationPage validateItemsInForm(String label, String value) {
-        resultForm.verifyLabelValue(resultTable, label, value);
+        resultForm.verifyLabelValue(label, value);
         return this;
     }
 }
