@@ -15,7 +15,7 @@ public class RegistrationPage {
     CalendarComponent calendar = new CalendarComponent();
     ModalFormComponent resultForm = new ModalFormComponent();
 
-     private SelenideElement
+    private SelenideElement
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
             userEmailInput = $("#userEmail"),
@@ -81,9 +81,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage setSubjects(String firstLetter, String fullWord) {
-        subjectInput.setValue(firstLetter);
-        subjectWrapper.$(byText(fullWord)).click();
+    public RegistrationPage setSubjects(String fullWord) {
+        subjectInput.setValue(fullWord).pressEnter();
         return this;
     }
 
@@ -111,7 +110,6 @@ public class RegistrationPage {
     }
 
     //modal component with assertions
-
 
     public RegistrationPage checkResultFormAppeared() {
         modalForm.should(appear);

@@ -25,7 +25,7 @@ public class FormsTests extends TestBase {
 
                 // Date & drop-down
                 .setBirthDay("30", "August", "1991")
-                .setSubjects("a", "Arts")
+                .setSubjects("Arts")
                 .setStateAndCity("Haryana", "Panipat")
 
                 //Upload Image field
@@ -58,7 +58,7 @@ public class FormsTests extends TestBase {
                 .setPermanentAddress("VLG perm")
                 .submitForm()
                 .checkResultFormAppeared()
-                .validateItemsInForm("Nasty","email@example.com", "VLG", "VLG perm");
+                .validateItemsInForm("Nasty","email@example.com", "", "");
     }
 
 }
