@@ -12,37 +12,24 @@ public class FormsTestsWithFakeData extends TestBase {
     @Test
     void successfulRegistrationTest() {
 
-        String firstName = randomValue.firstName,
-                lastName = randomValue.lastName,
-                userEmail = randomValue.userEmail,
-                userNumber = randomValue.userNumber,
-                currentAddress = randomValue.currentAddress,
-                gender = randomValue.gender,
-                hobbies = randomValue.hobbies,
-                birthdayDay = randomValue.birthdayDay,
-                birthdayMonth = randomValue.birthdayMonth,
-                birthdayYear = randomValue.birthdayYear,
-                subject = randomValue.subject,
-                state = randomValue.state,
-                city = randomValue.city,
-                picture = "example.png";
+        String picture = "example.png";
 
         registrationPage.openPage()
                 //Input fields
-                .setFirstName(firstName)
-                .setLastName(lastName)
-                .setUserEmail(userEmail)
-                .setUserNumber(userNumber)
-                .setCurrentAddress(currentAddress)
+                .setFirstName(randomValue.firstName)
+                .setLastName(randomValue.lastName)
+                .setUserEmail(randomValue.userEmail)
+                .setUserNumber(randomValue.userNumber)
+                .setCurrentAddress(randomValue.currentAddress)
 
                 //Radio & checkbox
-                .setGender(gender)
-                .setHobbies(hobbies)
+                .setGender(randomValue.gender)
+                .setHobbies(randomValue.hobbies)
 
                 // Date & drop-down
-                .setBirthDay(birthdayDay, birthdayMonth, birthdayYear)
-                .setSubjects(subject)
-                .setStateAndCity(state, city)
+                .setBirthDay(randomValue.birthdayDay, randomValue.birthdayMonth, randomValue.birthdayYear)
+                .setSubjects(randomValue.subject)
+                .setStateAndCity(randomValue.state, randomValue.city)
 
                 //Upload Image field
                 .uploadPicture(picture)
@@ -52,16 +39,18 @@ public class FormsTestsWithFakeData extends TestBase {
 
                 // assertions
                 .checkResultFormAppeared()
-                .validateItemsInForm("Student Name", firstName + " " + lastName)
-                .validateItemsInForm("Student Email", userEmail)
-                .validateItemsInForm("Gender", gender)
-                .validateItemsInForm("Mobile", userNumber)
-                .validateItemsInForm("Date of Birth", birthdayDay + " " + birthdayMonth + "," + birthdayYear)
-                .validateItemsInForm("Subjects", subject)
-                .validateItemsInForm("Hobbies", hobbies)
+                .validateItemsInForm("Student Name", randomValue.firstName + " " + randomValue.lastName)
+                .validateItemsInForm("Student Email", randomValue.userEmail)
+                .validateItemsInForm("Gender", randomValue.gender)
+                .validateItemsInForm("Mobile", randomValue.userNumber)
+                .validateItemsInForm("Date of Birth", randomValue.birthdayDay +
+                                    " " + randomValue.birthdayMonth +
+                                    "," + randomValue.birthdayYear)
+                .validateItemsInForm("Subjects", randomValue.subject)
+                .validateItemsInForm("Hobbies", randomValue.hobbies)
                 .validateItemsInForm("Picture", picture )
-                .validateItemsInForm("Address", currentAddress)
-                .validateItemsInForm("State and City", state + " " + city);
+                .validateItemsInForm("Address", randomValue.currentAddress)
+                .validateItemsInForm("State and City", randomValue.state + " " + randomValue.city);
     }
 
 }
