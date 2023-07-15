@@ -16,7 +16,7 @@ public class TestsRandomData {
             hobbies = faker.options().option("Sports", "Reading", "Music"),
             birthdayDay = String.valueOf(faker.number().numberBetween(01, 28)),
             birthdayMonth = faker.options().option("May", "February", "December", "June", "July"),
-            birthdayYear = String.valueOf(faker.number().numberBetween(1900, 2100)),
+            birthdayYear = String.valueOf(faker.number().numberBetween(1900, 2023)),
             subject = faker.options().option("Math", "Chemistry", "Arts", "History", "English"),
             state = faker.options().option("NCR", "Uttar Pradesh", "Haryana", "Rajasthan"),
             city = getRandomCity(state);

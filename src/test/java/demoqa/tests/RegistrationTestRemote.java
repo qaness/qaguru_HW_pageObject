@@ -2,6 +2,7 @@ package demoqa.tests;
 
 import demoqa.pages.RegistrationPage;
 import demoqa.utils.TestsRandomData;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class RegistrationTestRemote extends TestBaseRemote{
@@ -10,6 +11,7 @@ public class RegistrationTestRemote extends TestBaseRemote{
     TestsRandomData randomValue = new TestsRandomData();
 
     @Test
+    @Tag("remote")
     void successfulRegistrationTest() {
 
         String picture = "example.png";
