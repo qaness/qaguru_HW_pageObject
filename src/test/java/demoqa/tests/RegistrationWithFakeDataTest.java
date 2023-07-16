@@ -4,7 +4,7 @@ import demoqa.pages.RegistrationPage;
 import demoqa.utils.TestsRandomData;
 import org.junit.jupiter.api.Test;
 
-public class FormsTestsWithFakeData extends TestBase {
+public class RegistrationWithFakeDataTest extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
     TestsRandomData randomValue = new TestsRandomData();

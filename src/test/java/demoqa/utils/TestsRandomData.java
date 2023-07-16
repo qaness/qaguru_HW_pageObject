@@ -14,7 +14,7 @@ public class TestsRandomData {
             currentAddress = faker.address().fullAddress(),
             gender = faker.options().option("Male", "Female", "Other"),
             hobbies = faker.options().option("Sports", "Reading", "Music"),
-            birthdayDay = String.valueOf(faker.number().numberBetween(01, 28)),
+            birthdayDay = String.format("%02d", faker.number().numberBetween(1, 28)),
             birthdayMonth = faker.options().option("May", "February", "December", "June", "July"),
             birthdayYear = String.valueOf(faker.number().numberBetween(1900, 2100)),
             subject = faker.options().option("Math", "Chemistry", "Arts", "History", "English"),
